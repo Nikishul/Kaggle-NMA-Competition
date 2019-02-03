@@ -1,0 +1,3 @@
+Functions for editing and clearing data
+Typical linearizations
+etc.
