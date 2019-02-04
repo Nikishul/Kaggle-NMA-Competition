@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="scripts",
+    name="src",
     version="1.0",
     author="Nikita Shuldov",
     packages=find_packages(),
