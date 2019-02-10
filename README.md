@@ -1,2 +1,2 @@
-# Kaggle-NMA-Competition
+# Kaggle NMA Competition
 Jupyter Workflow
