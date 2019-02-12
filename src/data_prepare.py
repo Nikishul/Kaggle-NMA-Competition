@@ -28,12 +28,13 @@ def load_label_map(path_data=DEFAULT_DATA_PATH):
     return label_map
 
 def clean(raw_data):
-    review_text = BeautifulSoup(raw_data).get_text() 
-    letters_only = re.sub("[^a-zA-Z]", " ", review_text) 
-    words = letters_only.lower().split()                             
-    stops = set(stopwords.words("english"))  
-    meaningful_words = [w for w in words if not w in stops]   
-    return( " ".join( meaningful_words))
+	raw_data=raw_data.replace('QUOTED_SECTION','')
+	review_text = BeautifulSoup(raw_data).get_text() 
+	letters_only = re.sub("[^a-zA-Z]", " ", review_text) 
+	words = letters_only.lower().split()                             
+	stops = set(stopwords.words("english"))  
+	meaningful_words = [w for w in words if not w in stops]   
+	return( " ".join( meaningful_words))
 
 	
 	
