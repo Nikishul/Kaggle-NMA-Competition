@@ -43,8 +43,8 @@ def get_all_text_data_from_posts(post, thread):
 	for item in thread.itertuples():
 		buf=post[post["thread_num"]==item.thread_num]
 		line=str()
-		line=line+item.thread_name
+		line=line+" "+item.thread_name
 		for row in buf.itertuples():
-			line=line+str(row.text)
+			line=line+" "+str(row.text)
 		data_to_clean.append(line)
 	return data_to_clean
