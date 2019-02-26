@@ -9,7 +9,6 @@ DEFAULT_DATA_PATH = os.path.abspath(
 
 def quote_str_to_list(txt):
     return BeautifulSoup(txt, "lxml").get_text().replace('[','').replace(']','').replace("\'",'')
-	
 
 def load_train_data(path_data=DEFAULT_DATA_PATH):
 	post=pd.read_csv(os.path.join(path_data,"train\\post.csv"))
@@ -35,7 +34,6 @@ def clean(raw_data):
 	stops = set(stopwords.words("english"))  
 	meaningful_words = [w for w in words if not w in stops]   
 	return( " ".join( meaningful_words))
-
 	
 	
 def get_all_text_data_from_posts(post, thread):
